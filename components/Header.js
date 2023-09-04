@@ -109,6 +109,7 @@ function Header() {
 			userSection =
 				<div className={styles.headerIcons}>
 					<FontAwesomeIcon onClick={showModal} className={styles.userSection} icon={faUser} />
+					<FontAwesomeIcon icon={faEye} onClick={() => dispatch(unhideArticles())} className={styles.unhideIcon} />
 				</div>
 		}
 	}
@@ -119,7 +120,6 @@ function Header() {
 				<Moment className={styles.date} date={date} format="MMM Do YYYY" />
 				<h1 className={styles.title}>Morning News</h1>
 				{userSection}
-				<FontAwesomeIcon onClick={() => handleUnhideClick()} icon={faEye} className={styles.userSection}/>
 			</div>
 
 			<div className={styles.linkContainer}>
